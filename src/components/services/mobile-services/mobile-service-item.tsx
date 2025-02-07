@@ -8,12 +8,16 @@ export const MobileServiceItem = ({ item }: MobileServiceItemProps) => {
   const { Icon, TITLE, DESCRIPTION } = item;
 
   return (
-    <div className="w-full flex flex-col gap-2 h-28 p-4 bg-foreground rounded-lg border">
+    <article className="w-full flex flex-col gap-2 h-28 p-4 bg-foreground rounded-lg border transition-all hover:border-blue-300">
       <div className="flex items-center gap-2">
-        <Icon className="text-blue-500" size={18} />
-        <span className="font-semibold">{TITLE}</span>
+        <Icon
+          className="text-blue-400"
+          size={18}
+          aria-label={`Ícono de ${TITLE}`}
+        />
+        <h3 className="font-semibold">{TITLE}</h3>
       </div>
       <p className="text-sm">{DESCRIPTION}</p>
-    </div>
+    </article>
   );
 };

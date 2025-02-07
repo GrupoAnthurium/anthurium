@@ -4,5 +4,6 @@
 
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  @apply bg-softwhite text-softblack;
+  scroll-behavior: smooth;
+  @apply bg-softwhite text-zinc-600;
 }

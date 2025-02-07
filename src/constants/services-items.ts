@@ -2,7 +2,7 @@ import {
   LaptopIcon,
   CodeIcon,
   UsersRoundIcon,
-  ShieldIcon,
+  ShieldCheckIcon,
   ZapIcon,
   SettingsIcon,
 } from "lucide-react";
@@ -26,7 +26,7 @@ export const SERVICES_ITEMS = [
     DESCRIPTION: "Ofrecemos compromiso, calidad y excelencia en cada solución.",
   },
   {
-    Icon: ShieldIcon,
+    Icon: ShieldCheckIcon,
     TITLE: "Seguridad",
     DESCRIPTION: "Protegemos tus datos y sistemas contra amenazas digitales.",
   },

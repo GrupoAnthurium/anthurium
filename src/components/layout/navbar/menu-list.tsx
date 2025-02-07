@@ -1,16 +1,17 @@
+import Link from "next/link";
 import { MENU_ITEMS } from "@/constants";
 
 const renderListItem = (text: string) => (
   <li key={text}>
-    <a className="p-2 transition-all hover:text-blue-500" href="#">
+    <Link href="#services" className="p-2 transition-all hover:text-blue-400">
       {text}
-    </a>
+    </Link>
   </li>
 );
 
 export const MenuList = () => {
   return (
-    <ul className="flex space-x-1 font-semibold text-sm">
+    <ul className="space-x-1 font-semibold text-sm hidden sm:flex">
       {MENU_ITEMS.map(renderListItem)}
     </ul>
   );

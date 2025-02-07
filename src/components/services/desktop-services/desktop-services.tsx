@@ -3,7 +3,7 @@ import { SERVICES_ITEMS } from "@/constants";
 
 export const DesktopServices = () => {
   return (
-    <div className="w-full flex flex-col gap-3">
+    <section className="w-full flex flex-col gap-3">
       <div className="w-full flex gap-3">
         <DesktopServiceItem item={SERVICES_ITEMS[0]} />
         <div className="w-full flex gap-3">
@@ -16,6 +16,6 @@ export const DesktopServices = () => {
         <DesktopServiceItem item={SERVICES_ITEMS[4]} />
         <DesktopServiceItem item={SERVICES_ITEMS[5]} />
       </div>
-    </div>
+    </section>
   );
 };

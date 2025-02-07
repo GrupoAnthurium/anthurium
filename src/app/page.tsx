@@ -1,9 +1,10 @@
-import { Services } from "@/components";
+import { Hero, Services } from "@/components";
 
 export default function Home() {
   return (
-    <div className="w-full mt-4">
+    <>
+      <Hero />
       <Services />
-    </div>
+    </>
   );
 }
