@@ -5,5 +5,9 @@
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
-  @apply bg-softwhite text-zinc-600;
+  @apply bg-softwhite text-softblack;
+}
+
+::selection {
+  @apply bg-blue-300 text-softwhite;
 }

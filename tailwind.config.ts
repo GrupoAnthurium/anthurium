@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
+import typography from "@tailwindcss/typography";
 
 export default {
   darkMode: ["class"],
@@ -11,14 +12,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "",
         foreground: "#FFFFFF",
-        softwhite: "#FAFAFA",
-        softblack: "#171717",
+        softwhite: "#FCFCFC",
+        softblack: "#52525b",
+        softgrey: "#707070",
       },
       animation: {
-        marquee: "marquee 25s linear infinite",
-        marquee2: "marquee2 25s linear infinite",
+        marquee: "marquee 40s linear infinite",
+        marquee2: "marquee2 40s linear infinite",
       },
       keyframes: {
         marquee: {
@@ -32,5 +33,5 @@ export default {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, typography],
 } satisfies Config;

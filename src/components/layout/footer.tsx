@@ -1,3 +1,46 @@
+import Link from "next/link";
+import { SOCIAL_LINKS, FOOTER_SECTIONS } from "@/constants";
+
 export const Footer = () => {
-  return <footer>footer</footer>;
+  return (
+    <footer className="sm:py-18 container relative mx-auto px-6 border-t mt-20 md:py-24 lg:px-16 lg:py-24 xl:px-20 py-8">
+      <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div className="space-y-8 xl:col-span-1">
+          <Link href="#" className="w-40 font-semibold text-lg">
+            Anthurium
+          </Link>
+          <div className="flex space-x-5 text-softgrey">
+            {SOCIAL_LINKS.map(({ icon: Icon, href }, index) => (
+              <Link
+                key={index}
+                href={href}
+                className="transition-all hover:scale-110"
+              >
+                <Icon size={25} />
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {FOOTER_SECTIONS.map(({ title, items }, index) => (
+              <div key={index}>
+                <h6>{title}</h6>
+                <ul className="mt-4 space-y-2">
+                  {items.map((item, i) => (
+                    <li key={i} className="text-softgrey">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="mt-32 flex justify-between border-t pt-8">
+        <p className="text-sm font-semibold">© Anthurium</p>
+      </div>
+    </footer>
+  );
 };
