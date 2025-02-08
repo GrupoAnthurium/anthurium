@@ -6,7 +6,7 @@ interface DesktopServiceItemProps {
 
 export const DesktopServiceItem = ({ item }: DesktopServiceItemProps) => {
   return (
-    <div className="bg-foreground w-full h-96 p-4 border rounded-lg hover:border-blue-300 transition">
+    <div className="bg-foreground w-full h-96 p-4 border border-blue-300 rounded-lg hover:border-blue-400 transition">
       <div className="w-full flex flex-col gap-4">
         <div className="flex items-center gap-2">
           <item.Icon
