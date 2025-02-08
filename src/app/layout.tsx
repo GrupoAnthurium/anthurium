@@ -53,8 +53,8 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1 flex flex-col items-center justify-center w-full">
           <div className="max-w-7xl w-full px-6">{children}</div>
-          <Footer />
         </main>
+        <Footer />
       </body>
     </html>
   );
