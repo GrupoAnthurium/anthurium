@@ -3,4 +3,4 @@ export const FOOTER_SECTIONS = [
   { title: "B", items: ["asd"] },
   { title: "C", items: ["asd"] },
   { title: "D", items: ["asd"] },
-];
+] as const;

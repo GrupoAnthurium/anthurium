@@ -12,7 +12,7 @@ export const Services = () => {
       aria-labelledby="services-heading"
       className="pb-14 md:pb-24"
     >
-      <p className="px-1 py-2 font-semibold text-sm text-softgrey">
+      <p className="px-1 py-2 font-medium text-sm text-softgrey">
         Nuestros servicios
       </p>
       {isMobile ? <MobileServices /> : <DesktopServices />}
