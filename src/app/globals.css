@@ -13,5 +13,5 @@ body {
 }
 
 ::selection {
-  @apply bg-secondary text-softwhite;
+  @apply bg-primary text-softwhite;
 }
