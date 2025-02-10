@@ -14,7 +14,7 @@ export const Footer = () => {
               <Link
                 key={index}
                 href={href}
-                className="transition-all hover:scale-110"
+                className="transition-all hover:scale-110 hover:text-primary"
               >
                 <Icon size={25} />
               </Link>

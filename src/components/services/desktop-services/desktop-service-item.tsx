@@ -8,10 +8,10 @@ export const DesktopServiceItem = ({ item }: DesktopServiceItemProps) => {
   const { Icon, TITLE, DESCRIPTION } = item;
 
   return (
-    <div className="bg-foreground w-full h-96 p-4 border rounded-lg hover:border-blue-300 transition">
+    <div className="bg-foreground w-full h-96 p-4 border rounded-lg hover:border-secondary transition">
       <div className="w-full flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <Icon size={18} aria-label={`Icono de ${TITLE}`} className="text-blue-400" />
+          <Icon size={18} aria-label={`Icono de ${TITLE}`} className="text-primary" />
           <span className="font-semibold">{TITLE}</span>
         </div>
         <p

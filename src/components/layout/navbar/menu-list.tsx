@@ -3,7 +3,7 @@ import { MENU_ITEMS } from "@/constants";
 
 const renderListItem = (text: string) => (
   <li key={text}>
-    <Link href="#services" className="p-2 transition-all hover:text-blue-400">
+    <Link href="#services" className="p-2 transition-all hover:text-primary">
       {text}
     </Link>
   </li>

@@ -9,5 +9,5 @@ body {
 }
 
 ::selection {
-  @apply bg-blue-300 text-softwhite;
+  @apply bg-secondary text-softwhite;
 }

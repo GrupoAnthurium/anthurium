@@ -16,6 +16,8 @@ export default {
         softwhite: "#FCFCFC",
         softblack: "#52525b",
         softgrey: "#707070",
+        primary: "#60a5fa",
+        secondary: "#93c5fd",
       },
       animation: {
         marquee: "marquee 40s linear infinite",
