@@ -19,7 +19,7 @@ export const Marquee = () => {
         </div>
       </div>
 
-      <p className="w-full text-center text-sm mt-6 text-softgrey lg:mt-8">
+      <p className="w-full text-center text-sm mt-6 font-light tracking-wide text-softgrey lg:mt-8">
         Elegidos por empresas en crecimiento para impulsar su transformación
         digital.
       </p>
