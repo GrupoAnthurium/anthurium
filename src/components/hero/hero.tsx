@@ -2,7 +2,7 @@ import { Button } from "@/components";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col gap-2 container mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-20 text-center">
+    <header className="flex flex-col gap-2 container mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-20 text-center">
       <div className="max-w-2xl mx-auto flex flex-col items-center gap-2">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl">
           <span className="block">Tu empresa al</span>
@@ -15,14 +15,17 @@ export const Hero = () => {
         </p>
 
         <div className="flex gap-2 pt-2 my-3">
-          <Button variant="custom" aria-label="Comenzar ahora">
+          <Button variant="custom" aria-label="Empezá tu proyecto con nosotros">
             Comenzar ahora
           </Button>
-          <Button variant="outline" aria-label="Contactanos">
+          <Button
+            variant="outline"
+            aria-label="Contactanos para mas información"
+          >
             Contactanos
           </Button>
         </div>
       </div>
-    </div>
+    </header>
   );
 };

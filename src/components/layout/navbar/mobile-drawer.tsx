@@ -13,7 +13,7 @@ import { MenuIcon } from "lucide-react";
 
 const renderButton = (item: string) => (
   <SheetClose asChild key={item}>
-    <Link href="#services">
+    <Link href={`#${item.toLowerCase()}`}>
       <Button
         className={`w-full ${item === "Contacto" ? "mt-2" : "justify-start"}`}
         variant={`${item === "Contacto" ? "outline" : "ghost"}`}

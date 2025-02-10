@@ -1,7 +1,1 @@
-export const MENU_ITEMS = [
-  "Servicios",
-  "Nosotros",
-  "Clientes",
-  "Sumate",
-  "Contacto",
-] as const;
+export const MENU_ITEMS = ["Servicios", "Clientes", "Contacto"] as const;

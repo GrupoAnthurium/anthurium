@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { MENU_ITEMS } from "@/constants";
 
-const renderListItem = (text: string) => (
-  <li key={text}>
-    <Link href="#services" className="p-2 transition-all hover:text-primary">
-      {text}
+const renderListItem = (item: string) => (
+  <li key={item}>
+    <Link
+      href={`#${item.toLowerCase()}`}
+      className="p-2 transition-all hover:text-primary"
+    >
+      {item}
     </Link>
   </li>
 );
