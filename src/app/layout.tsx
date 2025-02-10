@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Navbar, Footer } from "@/components";
 // import background from "@/assets/background.svg";
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Anthurium",
@@ -44,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="w-full flex flex-col min-h-dvh relative">
+      <body
+        className={`${inter.className} w-full flex flex-col min-h-dvh relative`}
+      >
         {/* <img
           src={background.src}
           alt=""
