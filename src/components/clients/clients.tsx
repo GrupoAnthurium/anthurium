@@ -8,7 +8,7 @@ const renderClientLogo = (logo: string, index: number) => {
 
 export const Clients = () => {
   return (
-    <section id="clientes" className="py-16">
+    <section id="clientes" className="pb-14 md:pb-24">
       <p className="px-1 py-2 font-medium text-sm text-softgrey">
         Nuestros clientes
       </p>

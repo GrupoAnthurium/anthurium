@@ -8,14 +8,16 @@ export const Footer = () => {
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-8 xl:col-span-1">
           <Anthurium />
-          <div className="flex space-x-5 text-softgrey">
-            {SOCIAL_LINKS.map(({ icon: Icon, href }, index) => (
+          <div className="flex space-x-5">
+            {SOCIAL_LINKS.map(({ Icon, HREF }, index) => (
               <Link
                 key={index}
-                href={href}
-                className="transition-all hover:scale-110 hover:text-primary"
+                href={HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-softgrey transition-all hover:scale-110 hover:text-primary"
               >
-                <Icon size={25} />
+                <Icon size={20} />
               </Link>
             ))}
           </div>
