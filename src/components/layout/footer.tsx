@@ -1,6 +1,40 @@
 import Link from "next/link";
 import { Anthurium } from "@/components/anthurium";
 import { SOCIAL_LINKS, FOOTER_SECTIONS } from "@/constants";
+import type { TSocialLink, TFooterSection } from "@/types";
+
+const renderSocialLink = (item: TSocialLink) => {
+  const { Icon, HREF, NAME } = item;
+
+  return (
+    <Link
+      key={NAME}
+      href={HREF}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-softgrey transition-all hover:scale-110 hover:text-primary"
+    >
+      <Icon size={20} />
+    </Link>
+  );
+};
+
+const renderFooterSection = (section: TFooterSection) => {
+  const { title, items } = section;
+
+  return (
+    <div key={title}>
+      <h6>{title}</h6>
+      <ul className="mt-4 space-y-2">
+        {items.map((item, i) => (
+          <li key={i} className="text-softgrey">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export const Footer = () => {
   return (
@@ -9,33 +43,12 @@ export const Footer = () => {
         <div className="space-y-8 xl:col-span-1">
           <Anthurium />
           <div className="flex space-x-5">
-            {SOCIAL_LINKS.map(({ Icon, HREF }, index) => (
-              <Link
-                key={index}
-                href={HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-softgrey transition-all hover:scale-110 hover:text-primary"
-              >
-                <Icon size={20} />
-              </Link>
-            ))}
+            {SOCIAL_LINKS.map(renderSocialLink)}
           </div>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {FOOTER_SECTIONS.map(({ title, items }, index) => (
-              <div key={index}>
-                <h6>{title}</h6>
-                <ul className="mt-4 space-y-2">
-                  {items.map((item, i) => (
-                    <li key={i} className="text-softgrey">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {FOOTER_SECTIONS.map(renderFooterSection)}
           </div>
         </div>
       </div>

@@ -1,6 +1,17 @@
+import { CONTACT_INFO } from "@/constants";
+
 export const FOOTER_SECTIONS = [
-  { title: "A", items: ["asd"] },
-  { title: "B", items: ["asd"] },
-  { title: "C", items: ["asd"] },
-  { title: "D", items: ["asd"] },
+  {
+    title: "Servicios",
+    items: [
+      "Digitalización",
+      "Desarrollo",
+      "Profesionalismo",
+      "Seguridad",
+      "Automatización",
+      "Soporte IT",
+    ],
+  },
+  { title: "Clientes", items: ["asd"] },
+  { title: "Contacto", items: [CONTACT_INFO.EMAIL, CONTACT_INFO.PHONE] },
 ] as const;
