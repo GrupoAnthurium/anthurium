@@ -19,7 +19,7 @@ export const CustomCarousel = () => {
 
   return (
     <Carousel
-      className="mb-16"
+      className="mb-16 select-none"
       plugins={[
         Autoplay({
           delay: 2500,
