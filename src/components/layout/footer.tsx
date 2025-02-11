@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Anthurium } from "@/components/anthurium";
 import { SOCIAL_LINKS, FOOTER_SECTIONS } from "@/constants";
 
 export const Footer = () => {
@@ -6,9 +7,7 @@ export const Footer = () => {
     <footer className="relative sm:py-18 container mx-auto px-6 mt-20 md:py-24 lg:px-16 lg:py-24 xl:px-20 py-8 before:absolute before:inset-0 before:-top-1 before:h-[1px] before:w-full before:bg-gradient-to-r before:from-transparent before:via-zinc-200 before:to-transparent">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-8 xl:col-span-1">
-          <Link href="#" className="w-40 font-semibold text-lg">
-            Anthurium
-          </Link>
+          <Anthurium />
           <div className="flex space-x-5 text-softgrey">
             {SOCIAL_LINKS.map(({ icon: Icon, href }, index) => (
               <Link
@@ -39,7 +38,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="mt-32 flex justify-between border-t pt-8">
-        <p className="text-sm font-semibold">© Anthurium</p>
+        <p className="text-xs">© Anthurium</p>
       </div>
     </footer>
   );
