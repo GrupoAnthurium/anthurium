@@ -1,7 +1,7 @@
-import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { Facebook, InstagramIcon, LinkedinIcon } from "lucide-react";
 
 export const SOCIAL_LINKS = [
-  { icon: FaLinkedin, href: "#" },
-  { icon: FaFacebook, href: "#" },
-  { icon: FaInstagram, href: "#" },
+  { NAME: "Instagram", Icon: InstagramIcon, HREF: "#" },
+  { NAME: "LinkedIn", Icon: LinkedinIcon, HREF: "#" },
+  { NAME: "Facebook", Icon: Facebook, HREF: "#" },
 ] as const;

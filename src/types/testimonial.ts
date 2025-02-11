@@ -1,5 +1,3 @@
-export type TTestimonial = {
-  NAME: string;
-  COMPANY: string;
-  COMMENT: string;
-};
+import { TESTIMONIALS } from "@/constants";
+
+export type TTestimonial = (typeof TESTIMONIALS)[number];
