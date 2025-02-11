@@ -1,5 +1,3 @@
-import { CONTACT_INFO } from "@/constants";
-
 export const FOOTER_SECTIONS = [
   {
     title: "Servicios",
@@ -15,6 +13,6 @@ export const FOOTER_SECTIONS = [
   { title: "Clientes", items: ["asd"] },
   {
     title: "Contacto",
-    items: (() => [CONTACT_INFO.EMAIL, CONTACT_INFO.PHONE])(),
+    items: ["info@anthurium.com", "+54 (336) 456-7890"],
   },
 ] as const;
