@@ -11,7 +11,11 @@ const renderMarqueeItem = (item: string, index: number) => {
 export const Marquee = () => {
   return (
     <section className="pb-14 md:pb-24">
-      <div className="relative flex overflow-hidden max-w-2xl mx-auto">
+      <div
+        className="relative flex overflow-hidden max-w-2xl mx-auto 
+        [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_20%,rgba(0,0,0,1)_80%,rgba(0,0,0,0)_100%)]
+        [webkit-mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_20%,rgba(0,0,0,1)_80%,rgba(0,0,0,0)_100%)]"
+      >
         <div className="animate-marquee whitespace-nowrap text-softgrey">
           {MARQUEE_ITEMS.map(renderMarqueeItem)}
         </div>
