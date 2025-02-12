@@ -4,7 +4,9 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import { sendEmail } from "@/services";
+import { toast } from "sonner";
+import { Send, Loader2Icon } from "lucide-react";
 
 export const FormCard = () => {
   const [formData, setFormData] = useState({
@@ -12,21 +14,47 @@ export const FormCard = () => {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Formulario enviado:", formData);
-    setFormData({ name: "", email: "", message: "" });
+
+    if (!validateEmail(formData.email)) {
+      toast.error("El email ingresado no es válido", {
+        description: "Por favor, revisá el email ingresado",
+      });
+
+      return;
+    }
+
+    setIsLoading(true);
+    const result = await sendEmail(formData);
+    setIsLoading(false);
+
+    if (result.success) {
+      setFormData({ name: "", email: "", message: "" });
+      toast.success("Mensaje enviado correctamente", {
+        description: "¡Gracias por comunicarte con nosotros!",
+      });
+    } else {
+      console.error("Hubo un problema al enviar el correo");
+    }
   };
 
   return (
@@ -52,7 +80,6 @@ export const FormCard = () => {
           <Input
             id="email"
             name="email"
-            type="email"
             placeholder="tu@email.com"
             value={formData.email}
             onChange={handleChange}
@@ -72,9 +99,20 @@ export const FormCard = () => {
             required
           />
         </div>
-        <Button type="submit" variant="custom" className="w-full">
-          Enviar mensaje
-          <Send className="ml-2 size-4" />
+        <Button
+          type="submit"
+          variant="custom"
+          disabled={isLoading}
+          className="w-full"
+        >
+          {isLoading ? (
+            <Loader2Icon className="animate-spin" />
+          ) : (
+            <span className="flex items-center">
+              Enviar mensaje
+              <Send className="ml-2 size-4" />
+            </span>
+          )}
         </Button>
       </form>
     </div>

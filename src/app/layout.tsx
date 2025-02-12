@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Navbar, Footer } from "@/components";
+import { Toaster } from "@/components/ui/sonner";
 // import background from "@/assets/background.svg";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -60,6 +61,8 @@ export default function RootLayout({
           <div className="max-w-7xl w-full px-6">{children}</div>
         </main>
         <Footer />
+
+        <Toaster />
       </body>
     </html>
   );
