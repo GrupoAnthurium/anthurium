@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from,
-      to: ["gonzagrageda98@gmail.com", "octaviocossytorquati@gmail.com", "nachobiran@gmail.com"],
+      to: "gonzagrageda98@gmail.com",
       subject: "Nuevo mensaje de contacto",
       react: Email({ name, message, email }),
     });
