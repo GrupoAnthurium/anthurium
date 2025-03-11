@@ -14,7 +14,7 @@ export const Anthurium = ({ className }: AnthuriumProps) => {
       className={twMerge("font-semibold text-lg", className)}
       onClick={goUp}
     >
-      Anthurium
+      Anthurium Group
     </button>
   );
 };
