@@ -8,33 +8,33 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anthurium",
+  title: "Anthurium Group",
   description: "Digitalizá tu negocio con Anthurium. ¡Conocé más!",
   robots: "index, follow",
   openGraph: {
-    title: "Anthurium",
+    title: "Anthurium Group",
     description: "Digitalizá tu negocio con Anthurium. ¡Conocé más!",
     url: "https://anthurium-xyz.vercel.app/",
-    siteName: "Anthurium",
+    siteName: "Anthurium Group",
     images: [
       {
         url: "https://www.tusitio.com/imagen.jpg", // foto para social media
         width: 800,
         height: 600,
-        alt: "Anthurium",
+        alt: "Anthurium Group",
       },
     ],
   },
   twitter: {
     card: "summary_large_image", // tipo de tarjeta de Twitter
-    title: "Anthurium",
+    title: "Anthurium Group",
     description: "Digitalizá tu negocio con Anthurium. ¡Conocé más!",
     images: [
       {
         url: "https://www.tusitio.com/imagen.jpg", // imagen para Twitter
         width: 800,
         height: 600,
-        alt: "Anthurium",
+        alt: "Anthurium Group",
       },
     ],
   },

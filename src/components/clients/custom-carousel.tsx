@@ -12,9 +12,9 @@ import { TESTIMONIALS } from "@/constants";
 import type { TTestimonial } from "@/types";
 
 export const CustomCarousel = () => {
-  const renderClientItem = (testimonial: TTestimonial) => {
+  const renderClientItem = (testimonial: TTestimonial, index: number) => {
     const { COMMENT, NAME, COMPANY } = testimonial;
-    return <ClientItem key={NAME} comment={COMMENT} name={NAME} company={COMPANY} />;
+    return <ClientItem key={index} comment={COMMENT} name={NAME} company={COMPANY} />;
   };
 
   return (
