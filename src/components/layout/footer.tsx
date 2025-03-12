@@ -53,7 +53,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="mt-32 flex justify-between border-t pt-8">
-        <p className="text-xs">© Anthurium</p>
+        <p className="text-xs">© Anthurium Group</p>
       </div>
     </footer>
   );
