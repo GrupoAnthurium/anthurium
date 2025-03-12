@@ -1,10 +1,10 @@
-import { ClientLogo } from "@/components";
+// import { ClientLogo } from "@/components";
 import { CustomCarousel } from "@/components/clients/custom-carousel";
-import { CLIENT_LOGOS } from "@/constants";
+// import { CLIENT_LOGOS } from "@/constants";
 
-const renderClientLogo = (logo: string, index: number) => {
-  return <ClientLogo key={index} src={logo} alt={`Client logo ${index + 1}`} />;
-};
+// const renderClientLogo = (logo: string, index: number) => {
+//   return <ClientLogo key={index} src={logo} alt={`Client logo ${index + 1}`} />;
+// };
 
 export const Clients = () => {
   return (
@@ -15,9 +15,9 @@ export const Clients = () => {
 
       <CustomCarousel />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {CLIENT_LOGOS.map(renderClientLogo)}
-      </div>
+      </div> */}
     </section>
   );
 };
