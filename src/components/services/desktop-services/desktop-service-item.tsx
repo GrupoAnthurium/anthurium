@@ -8,7 +8,7 @@ export const DesktopServiceItem = ({ item }: DesktopServiceItemProps) => {
   const { Icon, TITLE, DESCRIPTION } = item;
 
   return (
-    <div className="bg-foreground w-full h-64 p-4 border rounded-lg hover:border-primary transition">
+    <div className="bg-foreground w-full h-34 p-4 border rounded-lg hover:border-primary transition">
       <div className="w-full flex flex-col gap-4">
         <div className="flex items-center gap-2">
           <Icon
