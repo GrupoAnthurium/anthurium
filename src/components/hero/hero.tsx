@@ -1,4 +1,5 @@
 import { Button } from "@/components";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -20,15 +21,22 @@ export const Hero = () => {
         </p>
 
         <div className="flex gap-2 pt-2 my-3">
-          <Button variant="custom" aria-label="Empezá tu proyecto con nosotros">
-            Comenzar ahora
-          </Button>
-          <Button
-            variant="outline"
-            aria-label="Contactanos para mas información"
-          >
-            Contactanos
-          </Button>
+          <Link href={"#servicios"}>
+            <Button
+              variant="custom"
+              aria-label="Empezá tu proyecto con nosotros"
+            >
+              Comenzar ahora
+            </Button>
+          </Link>
+          <Link href={"#contacto"}>
+            <Button
+              variant="outline"
+              aria-label="Contactanos para mas información"
+            >
+              Contactanos
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

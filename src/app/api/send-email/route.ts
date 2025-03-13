@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from,
       to: email,
-      subject: "Gracias por comunicarte con Anthurium",
+      subject: "Gracias por comunicarte con Grupo Anthurium",
       react: Email({ name }),
     });
 

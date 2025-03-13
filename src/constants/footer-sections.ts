@@ -8,9 +8,8 @@ export const FOOTER_SECTIONS = [
       "Soporte IT",
     ],
   },
-  // { title: "Clientes", items: ["asd"] },
   {
     title: "Contacto",
-    items: ["info@anthurium.com", "+54 (336) 456-7890"],
+    items: ["grupoanthurium@gmail.com", "+54 (336) 418-2053"],
   },
 ] as const;
