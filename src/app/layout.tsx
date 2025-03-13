@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 // import background from "@/assets/background.svg";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,6 +64,8 @@ export default function RootLayout({
         <Footer />
 
         <Toaster />
+
+        <Analytics /> 
       </body>
     </html>
   );
