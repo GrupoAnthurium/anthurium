@@ -7,16 +7,16 @@ Landing page moderna y responsive. Usa Next.js (con Turbopack), TypeScript, shad
 ### Instalación
 
 ```bash
-// cloná el repo
+# cloná el repo
 git clone https://github.com/NBN7/anthurium
 
-// navegá al dir del proyecto
+# navegá al dir del proyecto
 cd anthurium
 
-// instalá las dependencias
+# instalá las dependencias
 npm install
 
-// iniciá el server
+# iniciá el server
 npm run dev
 ```
 
