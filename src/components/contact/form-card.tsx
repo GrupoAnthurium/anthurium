@@ -102,7 +102,7 @@ export const FormCard = () => {
         <Button
           type="submit"
           variant="custom"
-          disabled={true}
+          disabled={isLoading}
           className="w-full"
         >
           {isLoading ? (
